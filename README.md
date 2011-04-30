@@ -4,6 +4,7 @@ Segmented Radio Buttons for Android
 This is my implementation of iOS's segmented controls for Android by extending RadioGroup and RadioButton. Example project included.
 
 Screenshot:
+
 ![Segmented Toggle Button](http://dl.dropbox.com/u/2020016/Photos/segmentedradio.png)
 
 Usage
