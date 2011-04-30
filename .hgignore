@@ -1,0 +1,11 @@
+# use glob syntax
+syntax: glob
+
+.svn*
+*.gitignore
+*.git
+*.DS_Store
+*.hg
+
+bin/*
+gen/*
