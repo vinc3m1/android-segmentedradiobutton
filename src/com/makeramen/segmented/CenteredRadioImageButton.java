@@ -23,11 +23,11 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.widget.RadioButton;
 
-public class CenteredRadioButton extends RadioButton {
+public class CenteredRadioImageButton extends RadioButton {
 
 	Drawable image;
 	
-	public CenteredRadioButton(Context context, AttributeSet attrs) {
+	public CenteredRadioImageButton(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.CompoundButton, 0, 0);
 		image = a.getDrawable(1);

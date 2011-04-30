@@ -58,17 +58,17 @@
 		android:orientation="horizontal"
 		android:id="@+id/segment_img"
 		android:checkedButton="@+id/button_add">
-			<com.makeramen.segmented.CenteredRadioButton
+			<com.makeramen.segmented.CenteredRadioImageButton
 				android:id="@id/button_add"
 				android:minWidth="40dip"
 				android:minHeight="33dip"
 				android:button="@android:drawable/ic_menu_add" />
-			<com.makeramen.segmented.CenteredRadioButton
+			<com.makeramen.segmented.CenteredRadioImageButton
 				android:id="@+id/button_call"
 				android:minWidth="40dip"
 				android:minHeight="33dip"
 				android:button="@android:drawable/ic_menu_call" />
-			<com.makeramen.segmented.CenteredRadioButton
+			<com.makeramen.segmented.CenteredRadioImageButton
 				android:id="@+id/button_camera"
 				android:minWidth="40dip"
 				android:minHeight="33dip"
