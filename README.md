@@ -22,6 +22,6 @@ Usage
 Known Issues
 ------------
 
-* SegmentedRadioImageButton currently uses a custom implemented scaleType similar to CENTER_INSIDE and doesn't repsect padding values. If anyone wants to extend the onDraw method to do so, that would be much appreciated.
+* SegmentedRadioImageButton currently uses a custom implemented scaleType similar to CENTER_INSIDE and doesn't respect padding values. If anyone wants to extend the onDraw method to do so, that would be much appreciated.
 
 * RadioGroup has a bug that calls onCheckedChangedListener multiple times when you use clearCheck() or check() programmatically. See [this](http://stackoverflow.com/questions/4519103/error-in-androids-clearcheck-for-radiogroup) for more info.
