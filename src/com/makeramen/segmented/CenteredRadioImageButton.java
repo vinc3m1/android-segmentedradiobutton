@@ -31,7 +31,7 @@ public class CenteredRadioImageButton extends RadioButton {
 		super(context, attrs);
 		TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.CompoundButton, 0, 0);
 		image = a.getDrawable(1);
-		setButtonDrawable(android.R.id.empty);
+		setButtonDrawable(android.R.color.transparent);
 	}
 
 	@Override
