@@ -23,58 +23,50 @@ import android.widget.Toast;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 
 public class SegmentedRadioActivity extends Activity implements OnCheckedChangeListener {
-    
+
 	SegmentedRadioGroup segmentText;
 	SegmentedRadioGroup segmentImg;
 	Toast mToast;
-	
+
 	/** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        
+
         segmentText = (SegmentedRadioGroup) findViewById(R.id.segment_text);
         segmentText.setOnCheckedChangeListener(this);
         segmentImg = (SegmentedRadioGroup) findViewById(R.id.segment_img);
         segmentImg.setOnCheckedChangeListener(this);
-        
+
         mToast = Toast.makeText(this, "", Toast.LENGTH_SHORT);
     }
 
 	@Override
 	public void onCheckedChanged(RadioGroup group, int checkedId) {
 		if (group == segmentText) {
-			switch(checkedId) {
-			case R.id.button_one:
+			if (checkedId == R.id.button_one) {
 				mToast.setText("One");
 				mToast.show();
-				break;
-			case R.id.button_two:
+			} else if (checkedId == R.id.button_two) {
 				mToast.setText("Two");
 				mToast.show();
-				break;
-			case R.id.button_three:
+			} else if (checkedId == R.id.button_three) {
 				mToast.setText("Three");
 				mToast.show();
-				break;
 			}
 		} else if (group == segmentImg) {
-			switch(checkedId) {
-			case R.id.button_add:
+			if (checkedId == R.id.button_add) {
 				mToast.setText("Add");
 				mToast.show();
-				break;
-			case R.id.button_call:
+			} else if (checkedId == R.id.button_call) {
 				mToast.setText("Call");
 				mToast.show();
-				break;
-			case R.id.button_camera:
+			} else if (checkedId == R.id.button_camera) {
 				mToast.setText("Camera");
 				mToast.show();
-				break;
 			}
 		}
 	}
-    
+
 }
