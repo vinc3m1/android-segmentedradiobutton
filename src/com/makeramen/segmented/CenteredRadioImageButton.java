@@ -60,7 +60,7 @@ public class CenteredRadioImageButton extends RadioButton {
 			int dx = (int) ((btnWidth - imgWidth * scale) * 0.5f + 0.5f);
             int dy = (int) ((btnHeight - imgHeight * scale) * 0.5f + 0.5f);
 
-			image.setBounds(dx, dy, (int)(dx + imgWidth * scale), (int)(dy + imgWidth * scale));
+			image.setBounds(dx, dy, (int)(dx + imgWidth * scale), (int)(dy + imgHeight * scale));
 
 			image.draw(canvas);
 		}
