@@ -2,5 +2,9 @@
 *.DS_Store
 *.hg
 
+project.properties
+lint.xml
+.settings/
+
 bin/
 gen/

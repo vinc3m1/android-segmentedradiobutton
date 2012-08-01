@@ -41,8 +41,7 @@ public class SegmentedRadioActivity extends Activity implements OnCheckedChangeL
 
         mToast = Toast.makeText(this, "", Toast.LENGTH_SHORT);
     }
-
-	@Override
+    
 	public void onCheckedChanged(RadioGroup group, int checkedId) {
 		if (group == segmentText) {
 			if (checkedId == R.id.button_one) {
