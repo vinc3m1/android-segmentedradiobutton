@@ -32,6 +32,7 @@ public class CenteredRadioImageButton extends RadioButton {
 		TypedArray a = context.obtainStyledAttributes(attrs, com.makeramen.segmented.R.styleable.CompoundButton, 0, 0);
 		image = a.getDrawable(1);
 		setButtonDrawable(android.R.color.transparent);
+                a.recycle();
 	}
 
 	@Override
@@ -60,7 +61,7 @@ public class CenteredRadioImageButton extends RadioButton {
 			int dx = (int) ((btnWidth - imgWidth * scale) * 0.5f + 0.5f);
             int dy = (int) ((btnHeight - imgHeight * scale) * 0.5f + 0.5f);
 
-			image.setBounds(dx, dy, (int)(dx + imgWidth * scale), (int)(dy + imgWidth * scale));
+			image.setBounds(dx, dy, (int)(dx + imgWidth * scale), (int)(dy + imgHeight * scale));
 
 			image.draw(canvas);
 		}
