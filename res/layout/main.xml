@@ -1,77 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-   Copyright (C) 2011 Make Ramen, LLC
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
--->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    >
-	<com.makeramen.segmented.SegmentedRadioGroup
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_margin="5dip"
-		android:orientation="horizontal"
-		android:id="@+id/segment_text"
-		android:checkedButton="@+id/button_one">
-		<RadioButton android:id="@id/button_one"
-			android:minWidth="40dip"
-			android:minHeight="33dip"
-			android:text="One"
-			android:textAppearance="?android:attr/textAppearanceSmall"
-			android:button="@null"
-			android:gravity="center"
-			android:textColor="@color/radio_colors" />
-		<RadioButton android:id="@+id/button_two"
-			android:minWidth="40dip"
-			android:minHeight="33dip"
-			android:text="Two"
-			android:button="@null"
-			android:gravity="center"
-			android:textAppearance="?android:attr/textAppearanceSmall"
-			android:textColor="@color/radio_colors" />
-		<RadioButton android:id="@+id/button_three"
-			android:minWidth="40dip"
-			android:minHeight="33dip"
-			android:text="Three"
-			android:button="@null"
-			android:gravity="center"
-			android:textAppearance="?android:attr/textAppearanceSmall"
-			android:textColor="@color/radio_colors" />
-	</com.makeramen.segmented.SegmentedRadioGroup>
-		<com.makeramen.segmented.SegmentedRadioGroup
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_margin="5dip"
-		android:orientation="horizontal"
-		android:id="@+id/segment_img"
-		android:checkedButton="@+id/button_add">
-			<com.makeramen.segmented.CenteredRadioImageButton
-				android:id="@id/button_add"
-				android:minWidth="40dip"
-				android:minHeight="33dip"
-				android:button="@android:drawable/ic_menu_add" />
-			<com.makeramen.segmented.CenteredRadioImageButton
-				android:id="@+id/button_call"
-				android:minWidth="40dip"
-				android:minHeight="33dip"
-				android:button="@android:drawable/ic_menu_call" />
-			<com.makeramen.segmented.CenteredRadioImageButton
-				android:id="@+id/button_camera"
-				android:minWidth="40dip"
-				android:minHeight="33dip"
-				android:button="@android:drawable/ic_menu_camera" />
-	</com.makeramen.segmented.SegmentedRadioGroup>
+    android:orientation="vertical" >
+
+    <com.makeramen.segmented.SegmentedRadioGroup
+        android:id="@+id/segment_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:checkedButton="@+id/button_one"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@id/button_one"
+            android:button="@null"
+            android:gravity="center"
+            android:minHeight="50dip"
+            android:minWidth="80dip"
+            android:text="One"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/radio_colors" />
+
+        <RadioButton
+            android:id="@+id/button_two"
+            android:button="@null"
+            android:gravity="center"
+            android:minHeight="50dip"
+            android:minWidth="80dip"
+            android:text="Two"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/radio_colors" />
+
+        <RadioButton
+            android:id="@+id/button_three"
+            android:button="@null"
+            android:gravity="center"
+            android:minHeight="50dip"
+            android:minWidth="80dip"
+            android:text="Three"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/radio_colors" />
+
+        <RadioButton
+            android:id="@+id/button_fore"
+            android:button="@null"
+            android:gravity="center"
+            android:minHeight="50dip"
+            android:minWidth="80dip"
+            android:text="Fore"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/radio_colors" />
+    </com.makeramen.segmented.SegmentedRadioGroup>
+
+    <com.makeramen.segmented.SegmentedRadioGroup
+        android:id="@+id/segment_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:checkedButton="@+id/button_add"
+        android:orientation="horizontal" >
+
+        <com.makeramen.segmented.CenteredRadioImageButton
+            android:id="@id/button_add"
+            android:button="@android:drawable/ic_menu_add"
+            android:minHeight="56dip"
+            android:minWidth="80dip" />
+
+        <com.makeramen.segmented.CenteredRadioImageButton
+            android:id="@+id/button_call"
+            android:button="@android:drawable/ic_menu_call"
+            android:minHeight="56dip"
+            android:minWidth="80dip" />
+
+        <com.makeramen.segmented.CenteredRadioImageButton
+            android:id="@+id/button_camera"
+            android:button="@android:drawable/ic_menu_camera"
+            android:minHeight="56dip"
+            android:minWidth="80dip" />
+    </com.makeramen.segmented.SegmentedRadioGroup>
+
+    <com.makeramen.segmented.SegmentedRadioGroup
+        android:id="@+id/srg_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:checkedButton="@+id/bt_view2"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/bt_view1"
+            android:button="@android:drawable/ic_menu_camera"
+            android:minHeight="56dip"
+            android:minWidth="80dip"
+            android:text="111" />
+
+        <RadioButton
+            android:id="@+id/bt_view2"
+            android:button="@android:drawable/ic_menu_camera"
+            android:gravity="center"
+            android:minHeight="56dip"
+            android:minWidth="80dip"
+            android:text="222" />
+    </com.makeramen.segmented.SegmentedRadioGroup>
+
+    <com.makeramen.segmented.SegmentedRadioGroup
+        android:id="@+id/srg_single"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:checkedButton="@+id/bt_single1"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/bt_single1"
+            android:button="@null"
+            android:gravity="center"
+            android:minHeight="56dip"
+            android:minWidth="80dip"
+            android:text="222" />
+    </com.makeramen.segmented.SegmentedRadioGroup>
+
 </LinearLayout>

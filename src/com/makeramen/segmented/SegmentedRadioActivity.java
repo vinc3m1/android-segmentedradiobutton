@@ -1,19 +1,3 @@
-/*
- * Copyright (C) 2011 Make Ramen, LLC
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package com.makeramen.segmented;
 
 import android.app.Activity;
@@ -26,33 +10,53 @@ public class SegmentedRadioActivity extends Activity implements OnCheckedChangeL
 
 	SegmentedRadioGroup segmentText;
 	SegmentedRadioGroup segmentImg;
+	SegmentedRadioGroup srg_bt;
+	SegmentedRadioGroup srg_single;
+
 	Toast mToast;
 
 	/** Called when the activity is first created. */
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.main);
 
-        segmentText = (SegmentedRadioGroup) findViewById(R.id.segment_text);
-        segmentText.setOnCheckedChangeListener(this);
-        segmentImg = (SegmentedRadioGroup) findViewById(R.id.segment_img);
-        segmentImg.setOnCheckedChangeListener(this);
+		segmentText = (SegmentedRadioGroup) findViewById(R.id.segment_text);
+		segmentText.setOnCheckedChangeListener(this);
 
-        mToast = Toast.makeText(this, "", Toast.LENGTH_SHORT);
-    }
-    
+		segmentImg = (SegmentedRadioGroup) findViewById(R.id.segment_img);
+		segmentImg.setOnCheckedChangeListener(this);
+
+		srg_bt = (SegmentedRadioGroup) findViewById(R.id.srg_bt);
+		srg_bt.setOnCheckedChangeListener(this);
+
+		srg_single = (SegmentedRadioGroup) findViewById(R.id.srg_single);
+		srg_single.setOnCheckedChangeListener(this);
+
+	}
+
 	public void onCheckedChanged(RadioGroup group, int checkedId) {
+		mToast = Toast.makeText(this, "", Toast.LENGTH_SHORT);
 		if (group == segmentText) {
-			if (checkedId == R.id.button_one) {
+			switch (checkedId) {
+			case R.id.button_one:
 				mToast.setText("One");
 				mToast.show();
-			} else if (checkedId == R.id.button_two) {
+				break;
+			case R.id.button_two:
 				mToast.setText("Two");
 				mToast.show();
-			} else if (checkedId == R.id.button_three) {
+				break;
+			case R.id.button_three:
 				mToast.setText("Three");
 				mToast.show();
+				break;
+			case R.id.button_fore:
+				mToast.setText("Fore");
+				mToast.show();
+				break;
+			default:
+				break;
 			}
 		} else if (group == segmentImg) {
 			if (checkedId == R.id.button_add) {
@@ -65,7 +69,21 @@ public class SegmentedRadioActivity extends Activity implements OnCheckedChangeL
 				mToast.setText("Camera");
 				mToast.show();
 			}
+		} else if (group == srg_bt) {
+			if (checkedId == R.id.bt_view1) {
+				mToast.setText("1111");
+				mToast.show();
+			} else if (checkedId == R.id.bt_view2) {
+				mToast.setText("2222");
+				mToast.show();
+			}
+		} else if (group == srg_single) {
+			if (checkedId == R.id.bt_single1) {
+				mToast.setText("Ò»¸ö");
+				mToast.show();
+			}
 		}
 	}
+
 
 }
