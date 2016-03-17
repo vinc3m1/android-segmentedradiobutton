@@ -6,7 +6,7 @@ This is my implementation of iOS's segmented controls for Android by extending R
 Screenshots
 -----------
 
-![Segmented Toggle Button](https://github.com/makeramen/android-segmentedradiobutton/raw/master/screens/segmentedradio.png)
+![Segmented Toggle Button](https://github.com/shaoshuai904/android-segmentedradiobutton/tree/master/screens/segmentedradio.png)
 
 Usage
 -----
