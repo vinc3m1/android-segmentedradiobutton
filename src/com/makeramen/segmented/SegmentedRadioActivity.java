@@ -12,7 +12,8 @@ public class SegmentedRadioActivity extends Activity implements OnCheckedChangeL
 	SegmentedRadioGroup segmentImg;
 	SegmentedRadioGroup srg_bt;
 	SegmentedRadioGroup srg_single;
-
+	
+ 
 	Toast mToast;
 
 	/** Called when the activity is first created. */
