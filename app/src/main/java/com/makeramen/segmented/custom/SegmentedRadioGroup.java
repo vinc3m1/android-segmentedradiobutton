@@ -1,13 +1,16 @@
-package com.makeramen.segmented;
+package com.makeramen.segmented.custom;
 
 import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.RadioGroup;
 
+import com.makeramen.segmented.R;
+
 /**
  * 分段式 RadioGroup
  *
- * @author shaoshuai
+ * @author maple
+ * @time 17/3/29
  */
 public class SegmentedRadioGroup extends RadioGroup {
 

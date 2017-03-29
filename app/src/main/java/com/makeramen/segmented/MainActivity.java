@@ -2,10 +2,18 @@ package com.makeramen.segmented;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.annotation.IdRes;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.makeramen.segmented.custom.SegmentedRadioGroup;
 
+/**
+ * show demo
+ *
+ * @author maple
+ * @time 17/3/29
+ */
 public class MainActivity extends Activity implements RadioGroup.OnCheckedChangeListener {
 
     SegmentedRadioGroup segmentText;
@@ -14,17 +22,37 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
     SegmentedRadioGroup srg_single;
 
 
-    Toast mToast;
-
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // 单个监听
         segmentText = (SegmentedRadioGroup) findViewById(R.id.segment_text);
-        segmentText.setOnCheckedChangeListener(this);
+        segmentText.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
+                switch (checkedId) {
+                    case R.id.button_one:
+                        showToast("One");
+                        break;
+                    case R.id.button_two:
+                        showToast("Two");
+                        break;
+                    case R.id.button_three:
+                        showToast("Three");
+                        break;
+                    case R.id.button_fore:
+                        showToast("Fore");
+                        break;
+                    default:
+                        break;
+                }
+            }
+        });
 
+        // 统一监听
         segmentImg = (SegmentedRadioGroup) findViewById(R.id.segment_img);
         segmentImg.setOnCheckedChangeListener(this);
 
@@ -36,55 +64,35 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
 
     }
 
-    public void onCheckedChanged(RadioGroup group, int checkedId) {
-        mToast = Toast.makeText(this, "", Toast.LENGTH_SHORT);
-        if (group == segmentText) {
+
+    @Override
+    public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
+        if (group == segmentImg) {
             switch (checkedId) {
-                case R.id.button_one:
-                    mToast.setText("One");
-                    mToast.show();
+                case R.id.button_add:
+                    showToast("Add");
                     break;
-                case R.id.button_two:
-                    mToast.setText("Two");
-                    mToast.show();
+                case R.id.button_call:
+                    showToast("Call");
                     break;
-                case R.id.button_three:
-                    mToast.setText("Three");
-                    mToast.show();
+                case R.id.button_camera:
+                    showToast("Camera");
                     break;
-                case R.id.button_fore:
-                    mToast.setText("Fore");
-                    mToast.show();
-                    break;
-                default:
-                    break;
-            }
-        } else if (group == segmentImg) {
-            if (checkedId == R.id.button_add) {
-                mToast.setText("Add");
-                mToast.show();
-            } else if (checkedId == R.id.button_call) {
-                mToast.setText("Call");
-                mToast.show();
-            } else if (checkedId == R.id.button_camera) {
-                mToast.setText("Camera");
-                mToast.show();
             }
         } else if (group == srg_bt) {
             if (checkedId == R.id.bt_view1) {
-                mToast.setText("1111");
-                mToast.show();
+                showToast("1111");
             } else if (checkedId == R.id.bt_view2) {
-                mToast.setText("2222");
-                mToast.show();
+                showToast("2222");
             }
         } else if (group == srg_single) {
             if (checkedId == R.id.bt_single1) {
-                mToast.setText("一个");
-                mToast.show();
+                showToast("一个");
             }
         }
     }
 
-
+    public void showToast(String msg) {
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+    }
 }

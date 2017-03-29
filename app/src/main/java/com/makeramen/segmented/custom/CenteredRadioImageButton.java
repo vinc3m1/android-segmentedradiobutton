@@ -1,27 +1,36 @@
-package com.makeramen.segmented;
+package com.makeramen.segmented.custom;
 
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
+import android.support.v7.widget.AppCompatRadioButton;
 import android.util.AttributeSet;
-import android.widget.RadioButton;
+
+import com.makeramen.segmented.R;
+
 
 /**
  * 图片居中的 RadioButton
  *
- * @author shaoshuai
+ * @author maple
+ * @time 17/3/29
  */
-public class CenteredRadioImageButton extends RadioButton {
+public class CenteredRadioImageButton extends AppCompatRadioButton {
 
     Drawable image;
 
     public CenteredRadioImageButton(Context context, AttributeSet attrs) {
         super(context, attrs);
-        TypedArray a = context.obtainStyledAttributes(attrs, com.makeramen.segmented.R.styleable.CompoundButton, 0, 0);
-        image = a.getDrawable(1);
-        setButtonDrawable(android.R.color.transparent);
-        a.recycle();
+
+        TypedArray a = context.getTheme().obtainStyledAttributes(attrs, R.styleable.MsButton, 0, 0);
+
+        try {
+            image = a.getDrawable(R.styleable.MsButton_msButton);
+        } finally {
+            setButtonDrawable(android.R.color.transparent);
+            a.recycle();
+        }
     }
 
     @Override
