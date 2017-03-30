@@ -1,9 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@drawable/segment_radio_grey_middle_focus" android:state_checked="true" android:state_focused="true" android:state_pressed="false"/>
-    <item android:drawable="@drawable/segment_radio_white_middle_focus" android:state_checked="false" android:state_focused="true" android:state_pressed="false"/>
 
-    <item android:drawable="@drawable/segment_radio_grey_middle_press" android:state_pressed="true"/>
-    <item android:drawable="@drawable/segment_radio_white_middle" android:state_checked="false"/>
-    <item android:drawable="@drawable/segment_radio_grey_middle"/>    <!-- default  -->
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="@color/btn_grey_press"/>
+
+            <stroke
+                android:width="@dimen/divide_line"
+                android:color="@color/btn_line"/>
+        </shape>
+    </item>
+
+    <item android:state_checked="true">
+        <shape>
+            <solid android:color="@color/btn_grey"/>
+
+            <stroke
+                android:width="@dimen/divide_line"
+                android:color="@color/btn_line"/>
+        </shape>
+    </item>
+
+    <item>
+        <shape>
+            <solid android:color="@color/btn_white"/>
+
+            <stroke
+                android:width="@dimen/divide_line"
+                android:color="@color/btn_line"/>
+        </shape>
+
+    </item>
+
 </selector>

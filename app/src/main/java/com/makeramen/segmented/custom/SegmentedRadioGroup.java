@@ -31,6 +31,10 @@ public class SegmentedRadioGroup extends RadioGroup {
     private void changeButtonsImages() {
         int count = super.getChildCount();
 
+        this.setBackgroundResource(R.drawable.segment_radio_single);
+        int line = (int) getResources().getDimension(R.dimen.divide_line);
+        this.setPadding(line, line, line, line);
+
         if (count > 1) {
             super.getChildAt(0).setBackgroundResource(R.drawable.segment_radio_left);
             for (int i = 1; i < count - 1; i++) {
@@ -38,7 +42,7 @@ public class SegmentedRadioGroup extends RadioGroup {
             }
             super.getChildAt(count - 1).setBackgroundResource(R.drawable.segment_radio_right);
         } else if (count == 1) {// 只有一个，纯粹是二逼
-            super.getChildAt(0).setBackgroundResource(R.drawable.segment_button);
+            super.getChildAt(0).setBackgroundResource(R.drawable.segment_radio_single);
         }
     }
 }

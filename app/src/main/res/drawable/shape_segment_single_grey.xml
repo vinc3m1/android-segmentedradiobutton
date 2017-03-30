@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <corners android:radius="@dimen/angle_value"/>
+
+    <solid android:color="@color/btn_grey"/>
+
+    <stroke
+        android:width="@dimen/divide_line"
+        android:color="@android:color/black"/>
+
+</shape>

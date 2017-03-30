@@ -3,4 +3,13 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <!--custom-->
+    <color name="btn_white">#EAEAEA</color>
+    <color name="btn_grey">#6B7478</color>
+    <color name="btn_grey_press">#525658</color>
+
+    <color name="btn_line">@android:color/black</color>
+    <color name="btn_line11">#AFAFAF</color>
+
 </resources>

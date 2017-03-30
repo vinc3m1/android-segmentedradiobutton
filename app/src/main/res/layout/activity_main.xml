@@ -70,7 +70,7 @@
         android:layout_width="160dp"
         android:layout_height="50dp"
         android:layout_margin="5dip"
-        android:checkedButton="@+id/bt_view2"
+        android:checkedButton="@+id/bt_view1"
         android:orientation="horizontal">
 
         <RadioButton
