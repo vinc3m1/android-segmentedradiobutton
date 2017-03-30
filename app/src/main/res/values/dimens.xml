@@ -1,4 +1,4 @@
 <resources>
     <dimen name="angle_value">5dp</dimen>
-    <dimen name="divide_line">0.5dp</dimen>
+    <dimen name="divide_line">0.25dp</dimen>
 </resources>

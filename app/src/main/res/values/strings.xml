@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">分段式按钮</string>
+    <string name="app_name">Segmented Radio Button</string>
+    <string name="app_name_cn">分段式单选按钮</string>
 </resources>
